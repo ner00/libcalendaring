@@ -800,7 +800,7 @@ class libcalendaring extends rcube_plugin
                 'start'    => !empty($alarm['start']) ? $this->adjust_timezone($alarm['start'])->format('c') : '',
                 'end'      => !empty($alarm['end']) ? $this->adjust_timezone($alarm['end'])->format('c') : '',
                 'allDay'   => !empty($alarm['allday']),
-                'action'   => $alarm['action'],
+                'action'   => $alarm['action'] ?? null,
                 'title'    => $alarm['title'],
                 'location' => $alarm['location'] ?? null,
             ];
